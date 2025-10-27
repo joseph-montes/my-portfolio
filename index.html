@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph Montes | Full Stack Portfolio</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="lucide.createIcons()">
+  
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" >
+        <p class="logo"><span class="joseph">Joseph</span> <span class="montes">Montes</span></p>
+      </a> 
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        </ul>
+      <button class="mobile-menu-btn" id="openMobileMenu" aria-label="Open menu">
+        <i data-lucide="menu" style="width: 2rem; height: 2rem;"></i>
+      </button>
+    </div>
+  </header>
+  
+  <div id="mobileMenu" class="hidden">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close-btn" id="closeMobileMenu" aria-label="Close menu">
+        <i data-lucide="x" style="width: 2rem; height: 2rem;"></i>
+      </button>
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      </div>
+  </div>
+  
+  <main class="container">
+    
+    <section class="hero-section" id="home">
+      <div class="hero-content">
+        <p class="title">Hello, I'm a <span></span> </p>
+        <h1>
+          Hi, I'm <span>Joseph Montes</span>
+        </h1>
+        <q>IT Student specializing in turning ideas into modern, scalable web applications.</q>
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i data-lucide="code" style="margin-right: 0.5rem;"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i data-lucide="mail" style="margin-right: 0.5rem;"></i> Contact Me
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="img/p1.jpg" alt="Professional profile photo of Joseph Montes" class="hero-profile-image">
+      </div>
+    </section>
+    
+    <hr class="separator">
+    
+    <section id="about">
+      <h2 class="section-heading text-center">About <span class="text-secondary">Me</span></h2>
+      <div class="about-content">
+        <p> 
+          I’m an IT student driven by <strong>curiosity</strong> and <strong>creativity</strong>, turning ideas into modern, user-friendly websites that make an impact. I love combining design and technology to create unique, <strong>responsive</strong>, and meaningful digital experiences.
+        </p>
+        <div>
+          <h3>Core Skills & Foundation:</h3>
+          <ul class="skill-list">
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i>  HTML5 & CSS3 (Grid/Flex)</li>
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i>  JavaScript (ES6+)</li>
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i>  Responsive Design</li>
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i>  Java (OOP)</li>
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i>  MySQL/Database</li>
+            <li><i data-lucide="check-circle" style="color: #4ade80"></i> Git & Version Control</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <hr class="separator">
+    
+    <section id="projects">
+      <h2 class="section-heading text-center">Featured <span>Projects</span></h2>
+      <div class="projects-grid" id="projects-container">
+      </div>
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="https://github.com/joseph-montes" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i data-lucide="github" style="margin-right: 0.5rem;"></i> See All Projects on GitHub →
+        </a>
+      </div>
+<div class="text-center" style="margin-top: 1rem;">
+    <a href="https://www.facebook.com/share/1BKXD6chN2/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+      <i data-lucide="facebook" style="margin-right: 0.5rem;"></i> Find Me on Facebook →
+    </a>
+  </div>
+
+    </section>
+    
+    <hr class="separator">
+    
+    <section id="contact">
+      <h2 class="section-heading text-center">Get In <span class="text-secondary">Touch</span></h2>
+      <form id="contactForm" class="contact-form-container">
+        <p class="text-center">I'm currently seeking new opportunities and challenges. Send me a message!</p>
+        
+        <div class="input-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+          <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+        </div>
+        
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        
+        <button type="submit" id="submitContact" class="btn btn-primary">
+          <i data-lucide="send" style="margin-right: 0.5rem;" id="sendIcon"></i>
+          <i data-lucide="loader-2" class="hidden spin" style="margin-right: 0.5rem;" id="loadingIcon"></i>
+          Send Message
+        </button>
+        <p id="form-message" role="status" aria-live="polite" class="text-center"></p>
+      </form>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container text-center">
+      <p>© 2025 Joseph Montes | Built with <span aria-hidden="true">❤️</span> & Standard Web Technologies</p>
+      <p>All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
